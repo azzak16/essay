@@ -102,15 +102,17 @@
 
     <!-- Hero Slider -->
     <section id="home" class="hero-slider">
-        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200');">
+        @foreach ($hero as $key => $h)
+        <div class="slide {{ $key == 0 ? 'active':'' }}" style="background-image: url('{{ asset('storage/'.$h->image) }}');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
         </div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');">
+        @endforeach
+        {{-- <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
         </div>
         <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
-        </div>
+        </div> --}}
 
         <div class="container h-100 position-relative d-flex align-items-center">
             <div class="text-center text-white">

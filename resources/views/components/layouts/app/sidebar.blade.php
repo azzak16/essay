@@ -21,6 +21,7 @@
                     <flux:navlist.item icon="home" :href="route('activities.index')" :current="request()->routeIs('activity')" wire:navigate>{{ __('Activity') }}</flux:navlist.item>
                     <flux:navlist.item icon="home" :href="route('teams.index')" :current="request()->routeIs('team')" wire:navigate>{{ __('Team') }}</flux:navlist.item>
                     <flux:navlist.item icon="home" :href="route('layanans.index')" :current="request()->routeIs('layanan')" wire:navigate>{{ __('Layanans') }}</flux:navlist.item>
+                    <flux:navlist.item icon="home" :href="route('heroes.index')" :current="request()->routeIs('hero')" wire:navigate>{{ __('Heroes') }}</flux:navlist.item>
                     @endrole
 
                 </flux:navlist.group>

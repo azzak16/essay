@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/activities', App\Livewire\Activities\Index::class)->name('activities.index');
         Route::get('/teams', App\Livewire\Teams\Index::class)->name('teams.index');
         Route::get('/layanans', App\Livewire\Layanans\Index::class)->name('layanans.index');
+        Route::get('/heroes', App\Livewire\Heroes\Index::class)->name('heroes.index');
 
 
     });
