@@ -352,30 +352,24 @@ Berkarakter Bela Negara</h1>
                 <hr class="w-25 mx-auto bg-white" style="height: 4px;">
                 <p class="lead">Mari Mendorong Sinergi Antar-Perguruan Tinggi</p>
             </div>
-            <div class="row g-4 justify-content-center">
+          <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4-4">
-                        <div class="bg-white bg-opacity-20 rounded-circle d-inline-flex p-3 mb-3">
-                            <i data-lucide="phone" class="text-white"></i>
-                        </div>
-                         <h5>Instagram</h5>
+                        
+                        <h5>Instagram</h5>
                         <p>Patriotmetric.upnjatim</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4">
-                        <div class="bg-white bg-opacity-20 rounded-circle d-inline-flex p-3 mb-3">
-                            <i data-lucide="mail" class="text-white"></i>
-                        </div>
+                        
                         <h5>Email</h5>
                         <p>patriot@upnjatim.ac.id</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4">
-                        <div class="bg-white bg-opacity-20 rounded-circle d-inline-flex p-3 mb-3">
-                            <i data-lucide="map-pin" class="text-white"></i>
-                        </div>
+                       
                         <h5>Alamat</h5>
                         <p>Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
                     </div>
