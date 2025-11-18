@@ -151,14 +151,15 @@ Berkarakter Bela Negara</h1>
             </div>
 
             <div class="row g-5 align-items-center mb-5">
-                <div class="col-lg-6">
-                    <p class="lead text-muted">
-                       UPN Patriot Metric hadir sebagai jawaban atas kebutuhan tersebut. Gagasan ini berangkat dari identitas historis UPN “Veteran” Jawa Timur sebagai kampus Bela Negara yang lahir dari semangat para pejuang kemerdekaan, dengan semboyan Widya Mwat Yasa – ilmu pengetahuan yang diabdikan untuk pembangunan bangsa. 
-                     </p>
-                    <p class="text-muted">
-                        Instrumen UPN Patriot Metric dirancang berbasis konstruk psikososial sehingga tidak hanya dipahami secara normatif, tetapi juga dapat dibandingkan antar institusi pendidikan tinggi melalui internalisasi, implementasi, dan pengembangan nilai-nilai bela negara serta karakter kebangsaan  dalam tridarma perguruan tinggi
-   </p>
-                </div>
+               <div class="col-lg-6">
+    <p class="lead text-muted justify-text">
+        UPN Patriot Metric hadir sebagai jawaban atas kebutuhan tersebut. Gagasan ini berangkat dari identitas historis UPN “Veteran” Jawa Timur sebagai kampus Bela Negara yang lahir dari semangat para pejuang kemerdekaan, dengan semboyan Widya Mwat Yasa – ilmu pengetahuan yang diabdikan untuk pembangunan bangsa.
+    </p>
+
+    <p class="text-muted justify-text">
+        Instrumen UPN Patriot Metric dirancang berbasis konstruk psikososial sehingga tidak hanya dipahami secara normatif, tetapi juga dapat dibandingkan antar institusi pendidikan tinggi melalui internalisasi, implementasi, dan pengembangan nilai-nilai bela negara serta karakter kebangsaan dalam tridarma perguruan tinggi.
+    </p>
+</div>
                 <div class="col-lg-6">
                     <div class="row g-4">
                         @php
