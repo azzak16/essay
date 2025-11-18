@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Teknologi Nusantara - Inovasi Digital Indonesia</title>
+    <title>PATRIOT METRIC</title>
+    <link rel="icon" href="{{ asset('images/upn.png') }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,7 +68,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold fs-4 bg-gradient-primary bg-clip-text text-transparent"
                style="background: linear-gradient(to right, #4361ee, #7209b7); -webkit-background-clip: text; color: transparent;">
-                PT Teknologi Nusantara
+               PATRIOT METRIC
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i data-lucide="menu" class="text-dark"></i>
@@ -116,8 +118,9 @@
 
         <div class="container h-100 position-relative d-flex align-items-center">
             <div class="text-center text-white">
-                <h1 class="display-3 fw-bold mb-4 slide-title">Transformasi Digital Untuk Indonesia</h1>
-                <p class="lead mb-5 slide-subtitle">Solusi teknologi terdepan untuk bisnis modern</p>
+                <h1 class="display-3 fw-bold mb-4 slide-title">Membangun Generasi Tangguh
+Berkarakter Bela Negara</h1>
+                <p class="lead mb-5 slide-subtitle">Menjadi Instrumen Evaluasi Kelembagaan</p>
                 <div>
                     <a href="#about" class="btn btn-primary btn-lg px-5 py-3 rounded-pill me-3">Pelajari Lebih Lanjut</a>
                     <a href="#contact" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Hubungi Kami</a>
@@ -150,19 +153,19 @@
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
                     <p class="lead text-muted">
-                        PT Teknologi Nusantara adalah perusahaan teknologi informasi terkemuka yang berdedikasi untuk membawa transformasi digital ke seluruh Indonesia. Dengan pengalaman lebih dari 8 tahun, kami telah melayani ratusan klien dari berbagai industri.
-                    </p>
+                       UPN Patriot Metric hadir sebagai jawaban atas kebutuhan tersebut. Gagasan ini berangkat dari identitas historis UPN “Veteran” Jawa Timur sebagai kampus Bela Negara yang lahir dari semangat para pejuang kemerdekaan, dengan semboyan Widya Mwat Yasa – ilmu pengetahuan yang diabdikan untuk pembangunan bangsa. 
+                     </p>
                     <p class="text-muted">
-                        Kami percaya bahwa teknologi adalah kunci untuk membuka potensi penuh dari setiap bisnis. Dengan tim yang berdedikasi dan metodologi yang terbukti, kami siap menjadi partner terpercaya dalam perjalanan digital transformation Anda.
-                    </p>
+                        Instrumen UPN Patriot Metric dirancang berbasis konstruk psikososial sehingga tidak hanya dipahami secara normatif, tetapi juga dapat dibandingkan antar institusi pendidikan tinggi melalui internalisasi, implementasi, dan pengembangan nilai-nilai bela negara serta karakter kebangsaan  dalam tridarma perguruan tinggi
+   </p>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-4">
                         @php
                             $stats = [
-                                ['8+', 'Tahun Pengalaman'],
-                                ['200+', 'Proyek Selesai'],
-                                ['150+', 'Klien Puas'],
+                                ['3', 'Kriteria Penilaian'],
+                                ['50+', 'Peserta Penilaian'],
+                                ['30+', 'Indikator Penialaian'],
                                 ['50+', 'Tim Profesional']
                             ];
                         @endphp
@@ -183,22 +186,23 @@
                     <div class="vision-card text-white p-5 rounded-4">
                         <div class="d-flex align-items-center mb-3">
                             <i data-lucide="eye" class="me-3" style="width:40px;height:40px;"></i>
-                            <h3 class="h4 fw-bold">Visi</h3>
+                            <h3 class="h4 fw-bold">SASARAN KEPESERTAAN</h3>
                         </div>
-                        <p>Menjadi perusahaan teknologi terdepan di Indonesia yang memberikan solusi inovatif dan berkelanjutan untuk mendorong transformasi digital nasional.</p>
+                        <p>Semua perguruan tinggi di Indonesia yang memiliki komitmen dalam memperkuat karakter kebangsaan dan bela negara, meningkatkan kualitas lulusan, dan berdampak pada negara
+</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mission-card text-white p-5 rounded-4">
                         <div class="d-flex align-items-center mb-3">
                             <i data-lucide="target" class="me-3" style="width:40px;height:40px;"></i>
-                            <h3 class="h4 fw-bold">Misi</h3>
+                            <h3 class="h4 fw-bold">BENEFIT BAGI KAMPUS PESERTA</h3>
                         </div>
                         <ul class="list-unstyled">
-                            <li class="mb-2">• Mengembangkan produk berkualitas tinggi</li>
-                            <li class="mb-2">• Memberdayakan talenta digital Indonesia</li>
-                            <li class="mb-2">• Membangun ekosistem digital inklusif</li>
-                            <li>• Menjalin kemitraan strategis</li>
+                            <li class="mb-2">• Pengakuan dan Reputasi Nasional</li>
+                            <li class="mb-2">• Meningkatkan Kesadaran Bela Negara</li>
+                            <li class="mb-2">• Jejaring dan Kolaborasi</li>
+                            <li>• Perubahan dan Aksi Sosial</li>
                         </ul>
                     </div>
                 </div>
@@ -212,7 +216,7 @@
             <div class="text-center mb-5">
                 <h2 class="display-5 fw-bold">Layanan Kami</h2>
                 <hr class="w-25 mx-auto bg-primary" style="height: 4px;">
-                <p class="lead text-muted">Solusi teknologi komprehensif untuk pertumbuhan bisnis Anda</p>
+                <p class="lead text-muted">Memperkuat Ekosistem Pendidikan Berbasis Nilai Kebangsaan</p>
             </div>
             <div class="row g-4">
                 @php
@@ -345,7 +349,7 @@
             <div class="text-center mb-5">
                 <h2 class="display-5 fw-bold">Hubungi Kami</h2>
                 <hr class="w-25 mx-auto bg-white" style="height: 4px;">
-                <p class="lead">Mari diskusikan transformasi digital bisnis Anda</p>
+                <p class="lead">Mari Mendorong Sinergi Antar-Perguruan Tinggi</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
@@ -354,7 +358,7 @@
                             <i data-lucide="phone" class="text-white"></i>
                         </div>
                         <h5>Telepon</h5>
-                        <p>+62 31 1234 5678</p>
+                        <p>+62-341-575797</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -363,7 +367,7 @@
                             <i data-lucide="mail" class="text-white"></i>
                         </div>
                         <h5>Email</h5>
-                        <p>info@teknusantara.com</p>
+                        <p>patriot@upnjatim.ac.id</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -372,7 +376,7 @@
                             <i data-lucide="map-pin" class="text-white"></i>
                         </div>
                         <h5>Alamat</h5>
-                        <p>Jl. Raya Darmo No. 123, Surabaya</p>
+                        <p>Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
                     </div>
                 </div>
             </div>
@@ -390,8 +394,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h5 class="fw-bold">PT Teknologi Nusantara</h5>
-                    <p class="small">Innovating Indonesia's Digital Future<br>Didirikan 2015</p>
+                    <h5 class="fw-bold">PATRIOT METRIC</h5>
+                    <p class="small">Pendidikan Berbasis Nilai Kebangsaan<br>Didirikan 2025</p>
                 </div>
                 <div class="col-md-3">
                     <h6>Link Cepat</h6>
@@ -402,10 +406,10 @@
                 </div>
                 <div class="col-md-3">
                     <h6>Kontak</h6>
-                    <p class="small">+62 31 1234 5678<br>info@teknusantara.com</p>
+                    <p class="small">+62-341-575797<br>patriot@upnjatim.ac.id</p>
                 </div>
                 <div class="col-md-3">
-                    <p class="small">&copy; 2024 PT Teknologi Nusantara. All rights reserved.</p>
+                    <p class="small">&copy; 2025 PATRIOT METRIC. UPA TIK UPN VETERAN JAWA TIMUR.</p>
                 </div>
             </div>
         </div>
