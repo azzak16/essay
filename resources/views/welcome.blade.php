@@ -356,8 +356,14 @@ Berkarakter Bela Negara</h1>
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4-4">
                         
-                        <h5>Instagram</h5>
-                        <p>Patriotmetric.upnjatim</p>
+                         <h5>Instagram</h5>
+    <p>
+        <a href="https://www.instagram.com/patriotmetric.upnjatim?igsh=MWdjeGppbDg2aXU3ag==" 
+           target="_blank" 
+           class="text-white text-decoration-underline">
+           Patriotmetric.upnjatim
+        </a>
+    </p>
                     </div>
                 </div>
                 <div class="col-md-4">
