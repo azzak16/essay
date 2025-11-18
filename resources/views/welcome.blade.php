@@ -426,13 +426,13 @@ Berkarakter Bela Negara</h1>
             let current = 0;
             const slides = $('.slide');
             const titles = [
-                "Transformasi Digital Untuk Indonesia",
+                "Bergerak dan Berdampak",
                 "Tim Profesional & Berpengalaman",
                 "Inovasi Tanpa Batas"
             ];
             const subtitles = [
-                "Solusi teknologi terdepan untuk bisnis modern",
-                "Lebih dari 100 project berhasil diselesaikan",
+                "Pelopor Generasi Berkarakter Bela Negara",
+                "",
                 "Menciptakan solusi untuk masa depan yang lebih baik"
             ];
 
