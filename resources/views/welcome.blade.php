@@ -357,8 +357,8 @@ Berkarakter Bela Negara</h1>
                         <div class="bg-white bg-opacity-20 rounded-circle d-inline-flex p-3 mb-3">
                             <i data-lucide="phone" class="text-white"></i>
                         </div>
-                        <h5>Telepon</h5>
-                        <p>+62-341-575797</p>
+                         <h5>Instagram</h5>
+                        <p>Patriotmetric.upnjatim</p>
                     </div>
                 </div>
                 <div class="col-md-4">
