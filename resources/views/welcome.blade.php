@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PATRIOT METRIC</title>
-    <link rel="icon" href="{{ asset('images/upn.png') }}" type="image/png">
-<link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <link rel="icon" href="{{ asset('storage/upn.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,54 +22,79 @@
             --dark: #1e293b;
             --light: #f8fafc;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
+
         .hero-slider {
             height: 100vh;
             position: relative;
             overflow: hidden;
         }
+
         .slide {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             opacity: 0;
             transition: opacity 1s ease;
             background-size: cover;
             background-position: center;
         }
-        .slide.active { opacity: 1; }
-        .gradient-overlay {
-            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+
+        .slide.active {
+            opacity: 1;
         }
+
+        .gradient-overlay {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+        }
+
         .stat-card {
             background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
         }
-        .vision-card { background: linear-gradient(135deg, #3b82f6, #2563eb); }
-        .mission-card { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
-        .service-card:hover { transform: translateY(-8px); }
-        .team-card:hover { transform: translateY(-4px); }
-        .navbar-scrolled {
-            background-color: rgba(255,255,255,0.95) !important;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+
+        .vision-card {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
         }
+
+        .mission-card {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .navbar-scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
         .nav-link.active {
             color: var(--primary) !important;
             font-weight: 600;
         }
     </style>
 </head>
+
 <body class="bg-slate-50">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm" id="mainNav">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4 bg-gradient-primary bg-clip-text text-transparent"
-               style="background: linear-gradient(to right, #4361ee, #7209b7); -webkit-background-clip: text; color: transparent;">
-               PATRIOT METRIC
+                style="background: linear-gradient(to right, #4361ee, #7209b7); -webkit-background-clip: text; color: transparent;">
+                PATRIOT METRIC
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i data-lucide="menu" class="text-dark"></i>
@@ -82,20 +108,20 @@
                     <li class="nav-item"><a class="nav-link" href="#team">Tim</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
                     @if (Route::has('login'))
-                        @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Log in</a>
-                            </li>
-                            {{-- @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Register</a>
-                                </li>
-                            @endif --}}
-                        @endauth
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Log in</a>
+                    </li>
+                    {{-- @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                    </li>
+                    @endif --}}
+                    @endauth
                     @endif
                 </ul>
             </div>
@@ -105,34 +131,40 @@
     <!-- Hero Slider -->
     <section id="home" class="hero-slider">
         @foreach ($hero as $key => $h)
-        <div class="slide {{ $key == 0 ? 'active':'' }}" style="background-image: url('{{ asset('storage/'.$h->image) }}');">
+        <div class="slide {{ $key == 0 ? 'active':'' }}"
+            style="background-image: url('{{ asset('storage/'.$h->image) }}');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
         </div>
         @endforeach
-        {{-- <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');">
+        {{-- <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
         </div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200');">
+        <div class="slide"
+            style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200');">
             <div class="gradient-overlay position-absolute w-100 h-100"></div>
         </div> --}}
 
         <div class="container h-100 position-relative d-flex align-items-center">
             <div class="text-center text-white">
                 <h1 class="display-3 fw-bold mb-4 slide-title">Membangun Generasi Tangguh
-Berkarakter Bela Negara</h1>
+                    Berkarakter Bela Negara</h1>
                 <p class="lead mb-5 slide-subtitle">Menjadi Instrumen Evaluasi Kelembagaan</p>
                 <div>
-                    <a href="#about" class="btn btn-primary btn-lg px-5 py-3 rounded-pill me-3">Pelajari Lebih Lanjut</a>
+                    <a href="#about" class="btn btn-primary btn-lg px-5 py-3 rounded-pill me-3">Pelajari Lebih
+                        Lanjut</a>
                     <a href="#contact" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Hubungi Kami</a>
                 </div>
             </div>
         </div>
 
         <!-- Slider Controls -->
-        <button class="btn btn-light btn-lg rounded-circle position-absolute start-4 top-50 translate-middle-y shadow" id="prevSlide">
+        <button class="btn btn-light btn-lg rounded-circle position-absolute start-4 top-50 translate-middle-y shadow"
+            id="prevSlide">
             <i data-lucide="chevron-left"></i>
         </button>
-        <button class="btn btn-light btn-lg rounded-circle position-absolute end-4 top-50 translate-middle-y shadow" id="nextSlide">
+        <button class="btn btn-light btn-lg rounded-circle position-absolute end-4 top-50 translate-middle-y shadow"
+            id="nextSlide">
             <i data-lucide="chevron-right"></i>
         </button>
 
@@ -151,24 +183,29 @@ Berkarakter Bela Negara</h1>
             </div>
 
             <div class="row g-5 align-items-center mb-5">
-              div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
                     <p class="lead text-muted">
-                       UPN Patriot Metric hadir sebagai jawaban atas kebutuhan tersebut. Gagasan ini berangkat dari identitas historis UPN “Veteran” Jawa Timur sebagai kampus Bela Negara yang lahir dari semangat para pejuang kemerdekaan, dengan semboyan Widya Mwat Yasa – ilmu pengetahuan yang diabdikan untuk pembangunan bangsa. 
-                     </p>
+                        UPN Patriot Metric hadir sebagai jawaban atas kebutuhan tersebut. Gagasan ini berangkat dari
+                        identitas historis UPN “Veteran” Jawa Timur sebagai kampus Bela Negara yang lahir dari semangat
+                        para pejuang kemerdekaan, dengan semboyan Widya Mwat Yasa – ilmu pengetahuan yang diabdikan
+                        untuk pembangunan bangsa.
+                    </p>
                     <p class="text-muted">
-                        Instrumen UPN Patriot Metric dirancang berbasis konstruk psikososial sehingga tidak hanya dipahami secara normatif, tetapi juga dapat dibandingkan antar institusi pendidikan tinggi melalui internalisasi, implementasi, dan pengembangan nilai-nilai bela negara serta karakter kebangsaan  dalam tridarma perguruan tinggi
-   </p>
+                        Instrumen UPN Patriot Metric dirancang berbasis konstruk psikososial sehingga tidak hanya
+                        dipahami secara normatif, tetapi juga dapat dibandingkan antar institusi pendidikan tinggi
+                        melalui internalisasi, implementasi, dan pengembangan nilai-nilai bela negara serta karakter
+                        kebangsaan  dalam tridarma perguruan tinggi
+                    </p>
                 </div>
                 <div class="col-lg-6">
                     <div class="row g-4">
                         @php
-                            $stats = [
-                                ['3', 'Kriteria Penilaian'],
-                                ['50+', 'Peserta Penilaian'],
-                                ['30+', 'Indikator Penialaian'],
-                                ['50+', 'Tim Profesional']
-                            ];
+                        $stats = [
+                        ['3', 'Kriteria Penilaian'],
+                        ['50+', 'Peserta Penilaian'],
+                        ['30+', 'Indikator Penialaian'],
+                        ['50+', 'Tim Profesional']
+                        ];
                         @endphp
                         @foreach($stats as $stat)
                         <div class="col-6">
@@ -189,8 +226,9 @@ Berkarakter Bela Negara</h1>
                             <i data-lucide="eye" class="me-3" style="width:40px;height:40px;"></i>
                             <h3 class="h4 fw-bold">SASARAN KEPESERTAAN</h3>
                         </div>
-                        <p>Semua perguruan tinggi di Indonesia yang memiliki komitmen dalam memperkuat karakter kebangsaan dan bela negara, meningkatkan kualitas lulusan, dan berdampak pada negara
-</p>
+                        <p>Semua perguruan tinggi di Indonesia yang memiliki komitmen dalam memperkuat karakter
+                            kebangsaan dan bela negara, meningkatkan kualitas lulusan, dan berdampak pada negara
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -221,27 +259,50 @@ Berkarakter Bela Negara</h1>
             </div>
             <div class="row g-4">
                 @php
-                    $services = [
-                        ['💻', 'Software Development', 'Aplikasi web & mobile custom'],
-                        ['☁️', 'Cloud Solutions', 'Migrasi & manajemen cloud'],
-                        ['🎨', 'UI/UX Design', 'Desain intuitif & menarik'],
-                        ['📊', 'Data Analytics', 'Insight bisnis dari data'],
-                        ['🔒', 'Cybersecurity', 'Keamanan aset digital'],
-                        ['🤖', 'AI & Machine Learning', 'Otomasi cerdas']
-                    ];
+                $services = [
+                ['💻', 'Software Development', 'Aplikasi web & mobile custom'],
+                ['☁️', 'Cloud Solutions', 'Migrasi & manajemen cloud'],
+                ['🎨', 'UI/UX Design', 'Desain intuitif & menarik'],
+                ['📊', 'Data Analytics', 'Insight bisnis dari data'],
+                ['🔒', 'Cybersecurity', 'Keamanan aset digital'],
+                ['🤖', 'AI & Machine Learning', 'Otomasi cerdas']
+                ];
                 @endphp
                 @foreach($layanan as $s)
                 <div class="col-md-6 col-lg-4">
-                    <div class="card service-card border-0 shadow h-100 p-4">
-                        <img src="{{ asset('storage/'.$s->image) }}" class="card-img-top" alt="{{ $s->name }}" style="height:200px; object-fit:cover;">
-                        <h5 class="fw-bold">{{ $s->name }}</h5>
-                        <p class="text-muted">{{ $s->description }}</p>
+                    <div class="card service-card border-0 shadow h-100 p-4 click-service"
+                        data-id="{{ $s->id }}" style="cursor:pointer">
+
+                        <img src="{{ asset('storage/'.$s->image) }}" class="card-img-top"
+                            alt="{{ $s->name }}" style="height:200px; object-fit:cover">
+                        <h5 class="fw-bold mt-3">{{ $s->name }}</h5>
+                        <p class="text-muted">{{ Str::limit($s->description, 80) }}</p>
                     </div>
                 </div>
                 @endforeach
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="serviceModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalServiceTitle"></h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <img id="modalServiceImage" class="img-fluid rounded mb-3" alt="">
+                    <p id="modalServiceDescription"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Activities -->
     <section id="activities" class="py-5">
@@ -252,16 +313,20 @@ Berkarakter Bela Negara</h1>
             </div>
             <div class="row g-4">
                 @php
-                    $activities = [
-                        ['Workshop Teknologi AI', '15 Okt 2024', 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600', 'Pelatihan AI untuk 50+ peserta'],
-                        ['Tech Conference 2024', '22 Sep 2024', 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600', '500+ peserta nasional'],
-                        ['CSR - Donasi Komputer', '5 Agt 2024', 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600', '20 unit untuk sekolah terpencil']
-                    ];
+                $activities = [
+                ['Workshop Teknologi AI', '15 Okt 2024',
+                'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600', 'Pelatihan AI untuk 50+ peserta'],
+                ['Tech Conference 2024', '22 Sep 2024',
+                'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600', '500+ peserta nasional'],
+                ['CSR - Donasi Komputer', '5 Agt 2024',
+                'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600', '20 unit untuk sekolah terpencil']
+                ];
                 @endphp
                 @foreach($activity as $a)
                 <div class="col-md-4 col-lg-3">
                     <div class="card border-0 shadow h-100 overflow-hidden">
-                        <img src="{{ asset('storage/'.$a->image) }}" class="card-img-top" alt="{{ $a->name }}" style="height:200px; object-fit:cover;">
+                        <img src="{{ asset('storage/'.$a->image) }}" class="card-img-top" alt="{{ $a->name }}"
+                            style="height:200px; object-fit:cover;">
                         <div class="card-body">
                             <small class="text-primary"><i data-lucide="calendar"></i> {{ $a->date }}</small>
                             <h5 class="mt-2 fw-bold">{{ $a->name }}</h5>
@@ -285,10 +350,12 @@ Berkarakter Bela Negara</h1>
             <!-- CEO -->
             {{-- <div class="row justify-content-center mb-5">
                 <div class="col-lg-8">
-                    <div class="card border-0 shadow-lg p-4" style="background: linear-gradient(135deg, #dbeafe, #ddd6fe);">
+                    <div class="card border-0 shadow-lg p-4"
+                        style="background: linear-gradient(135deg, #dbeafe, #ddd6fe);">
                         <div class="row g-4 align-items-center">
                             <div class="col-md-4">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" class="rounded-circle w-100" alt="CEO">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+                                    class="rounded-circle w-100" alt="CEO">
                             </div>
                             <div class="col-md-8">
                                 <h3 class="fw-bold">Budi Santoso</h3>
@@ -303,16 +370,18 @@ Berkarakter Bela Negara</h1>
             <!-- Leadership -->
             <div class="row g-4">
                 @php
-                    $leaders = [
-                        ['Andi Wijaya', 'CTO', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400'],
-                        ['Siti Nurhaliza', 'CFO', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400'],
-                        ['Rudi Hartono', 'Head of Engineering', 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400']
-                    ];
+                $leaders = [
+                ['Andi Wijaya', 'CTO', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400'],
+                ['Siti Nurhaliza', 'CFO', 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400'],
+                ['Rudi Hartono', 'Head of Engineering',
+                'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400']
+                ];
                 @endphp
                 @foreach($team as $l)
                 <div class="col-md-6 col-lg-4">
                     <div class="card team-card border-0 shadow h-100">
-                        <img src="{{ asset('storage/'.$l->image) }}" class="card-img-top" alt="{{ $l->title }}" style="height:280px; object-fit:cover;">
+                        <img src="{{ asset('storage/'.$l->image) }}" class="card-img-top" alt="{{ $l->title }}"
+                            style="height:280px; object-fit:cover;">
                         <div class="card-body text-center">
                             <h5 class="fw-bold">{{ $l->name }}</h5>
                             <p class="text-primary">{{ $l->title }}</p>
@@ -332,7 +401,8 @@ Berkarakter Bela Negara</h1>
                 <hr class="w-25 mx-auto bg-primary" style="height: 4px;">
             </div>
             <div class="row g-4 text-center">
-                @foreach(['🏦 Bank Nusantara', '🛒 Retail Group', '📱 Telco Indonesia', '🏥 Healthcare Plus', '📚 Edu Tech', '🚚 Logistics Pro'] as $client)
+                @foreach(['🏦 Bank Nusantara', '🛒 Retail Group', '📱 Telco Indonesia', '🏥 Healthcare Plus', '📚 Edu
+                Tech', '🚚 Logistics Pro'] as $client)
                 <div class="col-4 col-md-2">
                     <div class="p-4 bg-light rounded-3 shadow-sm">
                         <div class="display-4">{{ explode(' ', $client)[0] }}</div>
@@ -352,30 +422,29 @@ Berkarakter Bela Negara</h1>
                 <hr class="w-25 mx-auto bg-white" style="height: 4px;">
                 <p class="lead">Mari Mendorong Sinergi Antar-Perguruan Tinggi</p>
             </div>
-          <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4-4">
-                        
-                         <h5>Instagram</h5>
-    <p>
-        <a href="https://www.instagram.com/patriotmetric.upnjatim?igsh=MWdjeGppbDg2aXU3ag==" 
-           target="_blank" 
-           class="text-white text-decoration-underline">
-           Patriotmetric.upnjatim
-        </a>
-    </p>
+
+                        <h5>Instagram</h5>
+                        <p>
+                            <a href="https://www.instagram.com/patriotmetric.upnjatim?igsh=MWdjeGppbDg2aXU3ag=="
+                                target="_blank" class="text-white text-decoration-underline">
+                                Patriotmetric.upnjatim
+                            </a>
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4">
-                        
+
                         <h5>Email</h5>
                         <p>patriot@upnjatim.ac.id</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="text-center p-4 bg-white bg-opacity-10 rounded-4">
-                       
+
                         <h5>Alamat</h5>
                         <p>Jl. Rungkut Madya No.1, Gn. Anyar, Kec. Gn. Anyar, Surabaya, Jawa Timur 60294</p>
                     </div>
@@ -421,6 +490,29 @@ Berkarakter Bela Negara</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function() {
+
+            $(document).on('click', '.click-service', function() {
+                let id = $(this).data('id');
+
+                $.ajax({
+                    url: '/detail/' + id,
+                    type: 'GET',
+                    beforeSend: function() {
+                        $('#modalServiceTitle').text('Loading...');
+                        $('#modalServiceImage').attr('src', '');
+                        $('#modalServiceDescription').text('');
+                    },
+                    success: function(res) {
+                        $('#modalServiceTitle').text(res.name);
+                        $('#modalServiceImage').attr('src', res.image);
+                        $('#modalServiceDescription').text(res.description);
+
+                        var modal = new bootstrap.Modal(document.getElementById('serviceModal'));
+                        modal.show();
+                    }
+                });
+            });
+
             lucide.createIcons();
 
             // Slider
@@ -488,4 +580,5 @@ Berkarakter Bela Negara</h1>
         });
     </script>
 </body>
+
 </html>

@@ -21,4 +21,15 @@ class HomeController extends Controller
 
         return view('welcome', compact('activity', 'team', 'layanan', 'hero'));
     }
+
+    public function detail($id)
+    {
+        $data = Layanan::findOrFail($id);
+
+        return response()->json([
+            'name' => $data->name,
+            'description' => $data->description,
+            'image' => asset('storage/'.$data->image),
+        ]);
+    }
 }
